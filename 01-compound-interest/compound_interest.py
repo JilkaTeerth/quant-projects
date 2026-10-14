@@ -36,13 +36,17 @@ def main():
     print(f"vs ${flat[-1]:,.2f} with simple interest")
     print(f"Compounding earned you an extra ${compound[-1] - flat[-1]:,.2f}")
 
-    plt.plot(compound, label="Compound interest", linewidth=2)
-    plt.plot(flat, label="Simple interest", linestyle="--")
-    plt.title(f"${principal:,.0f} at {rate * 100:g}% for {years} years")
+    plt.rcParams.update({"figure.facecolor": "#fffdf7", "axes.facecolor": "#fffdf7",
+                         "axes.edgecolor": "#14212b", "text.color": "#14212b",
+                         "axes.labelcolor": "#14212b", "xtick.color": "#4e5b66", "ytick.color": "#4e5b66"})
+    plt.plot(compound, label="Compound interest", color="#2a78d6", linewidth=2.5)
+    plt.plot(flat, label="Simple interest", color="#8a8273", linestyle="--")
+    plt.title(f"${principal:,.0f} at {rate * 100:g}% for {years} years", loc="left", fontweight="bold")
     plt.xlabel("Year")
     plt.ylabel("Balance ($)")
-    plt.legend()
-    plt.grid(alpha=0.3)
+    plt.legend(frameon=False)
+    plt.grid(color="#dce3e8")
+    plt.gca().spines[["top", "right"]].set_visible(False)
     plt.savefig("growth.png", dpi=150, bbox_inches="tight")
     print("Chart saved to growth.png")
 

@@ -1,7 +1,7 @@
 <p align="center"><img src="assets/banner.svg" alt="Quant Projects" width="100%"></p>
 
 <p align="center">
-  <img alt="progress" src="https://img.shields.io/badge/progress-1%2F10-4c8dff?style=flat-square">
+  <img alt="progress" src="https://img.shields.io/badge/progress-1%2F10-2a78d6?style=flat-square">
   <img alt="license" src="https://img.shields.io/badge/license-MIT-lightgrey?style=flat-square">
 </p>
 
